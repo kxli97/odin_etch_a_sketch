@@ -19,13 +19,13 @@ function createGrid(gridSize) {
             let interactions = parseInt(square.dataset.interactions);
             
             // darkening effect can only work until 10th times
-            if (interactions < 10) {
+            if (interactions < 5) {
                 interactions++;
                 square.dataset.interactions = interactions;
                 
                 // Calculate opacity (10% per interaction)
-                const opacity = interactions * 0.1;
-                square.style.backgroundColor = `rgba(217, 176, 217, ${opacity})`;
+                const opacity = interactions * 0.2;
+                square.style.backgroundColor = `rgba(224, 31, 224, ${opacity})`;
             }
     });
     };
